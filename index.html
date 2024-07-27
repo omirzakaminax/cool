@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HTML Project</title>
     <style>
         body {
             font-family: 'Verdana', sans-serif;
@@ -13,119 +12,53 @@
             padding: 0;
             background-color: #f0f0f0;
             color: #333;
-            overflow-x: hidden;
         }
 
-        header {
+        #header {
             background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        header a {
+        #header b {
+            font-size: 2em;
             color: white;
+        }
+
+        #header a {
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 16px;
+            color: white;
+            margin: 0 15px;
+            font-size: 1.2em;
             transition: color 0.3s;
         }
 
-        header a:hover {
-            color: #333;
+        #header a:hover {
+            color: #ffd700;
         }
 
-        main {
-            padding: 70px 20px 20px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            transition: all 0.3s ease-in-out;
-        }
-
-        section {
-            background: white;
-            margin-bottom: 20px;
+        #main {
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-        }
-
-        footer {
-            background-color: black;
-            color: #4CAF50;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .nav-list {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        .nav-list li {
-            display: inline;
-            margin: 0 5px;
-        }
-
-        .nav-list a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-size: 16px;
-        }
-
-        .nav-list a:hover {
-            color: #333;
         }
 
         .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
             background-color: #4CAF50;
             border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px #999;
-            transition: background-color 0.3s, transform 0.3s;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition: background-color 0.3s;
+            cursor: pointer;
         }
 
         .button:hover {
-            background-color: #3e8e41;
-        }
-
-        .button:active {
-            background-color: #3e8e41;
-            box-shadow: 0 2px #666;
-            transform: translateY(4px);
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
+            background-color: #45a049;
         }
 
         @keyframes fadeIn {
@@ -137,129 +70,30 @@
             }
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            header {
-                padding: 5px 0;
-            }
-
-            header a {
-                font-size: 14px;
-                margin: 0 5px;
-            }
-
-            .nav-list li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            main {
-                padding: 80px 10px 10px 10px;
-            }
-
-            section {
-                padding: 15px;
-                margin-bottom: 15px;
-            }
-
-            .button {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-
-            footer {
-                padding: 5px 0;
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header a {
-                font-size: 12px;
-                margin: 0 3px;
-            }
-
-            .button {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
-
-            section {
-                padding: 10px;
-                margin-bottom: 10px;
-            }
-
-            footer {
-                font-size: 12px;
-            }
+        .fade-in {
+            animation: fadeIn 2s ease-in;
         }
     </style>
 </head>
 
 <body>
-
-    <header>
+    <div id="header">
+        <b>GeeksForGeeks</b>
         <nav>
-            <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <a href="#home" class="fade-in">Home</a>
+            <a href="#about" class="fade-in">About</a>
+            <a href="#services" class="fade-in">Services</a>
+            <a href="#contact" class="fade-in">Contact</a>
         </nav>
-    </header>
+    </div>
 
-    <main>
-        <section class="fade-in">
-            <h1>Welcome to My Personal Website</h1>
-            <p>This is a more beautiful and user-friendly interface.</p>
-            <p>Enjoy the animations and the improved design.</p>
-        </section>
-        <section class="fade-in">
-            <h2>Calculator</h2>
-            <a href="#" class="button">➲</a>
-        </section>
-        <section class="fade-in">
-            <h2>Calendar</h2>
-            <a href="#" class="button">➲</a>
-        </section>
-        <section class="fade-in">
-            <h2>ChatBot</h2>
-            <a href="#" class="button">➲</a>
-        </section>
-        <section class="fade-in">
-            <h2>Contact Saver</h2>
-            <a href="#" class="button">➲</a>
-        </section>
-        <section class="fade-in">
-            <h2>Daily Quiz</h2>
-            <a href="#" class="button">➲</a>
-        </section>
-    </main>
 
-    <footer>
-        <p>© Copyright 2050 by nobody. All rights reserved.</p>
-        <a href="#header" class="button">TOP</a>
-    </footer>
-
-    <script>
-        // Scroll animation for sections
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-
+    <div id="main">
+        <h1>Welcome to GeeksForGeeks</h1>
+        <p>Your content goes here...</p>
+        <button class="button fade-in">Click Me</button>
+    </div>
 </body>
 
 </html>
+
